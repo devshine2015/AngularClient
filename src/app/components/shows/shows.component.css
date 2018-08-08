@@ -1,0 +1,12 @@
+.thumbnail {
+  background-color: white;
+  border: none;
+}
+
+.show-container {
+  border: 1px solid black;
+  border-radius: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

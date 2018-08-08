@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-md-6 startDate-select">
+    <h3 class="page-header">Start date</h3>
+
+    <input
+          [(ngModel)]="startDate"
+          ngui-datetime-picker
+          [show-close-layer]="true"
+          [is-draggable]="false"
+          />
+
+  </div>
+
+  <div class="col-md-6 date-select">
+    <h3 class="page-header">End date</h3>
+
+    <input
+          [(ngModel)]="endDate"
+          ngui-datetime-picker
+          [show-close-layer]="true"
+          [is-draggable]="false"
+          />
+
+  </div>
+</div>
+
+<div class="row button-row">
+  <div class="col-md-12">
+    <button class="btn btn-primary" (click)="getPlaylist()">Get Playlist</button>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-12">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Classification</th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Album</th>
+          <th>Label</th>
+          <th>Year</th>
+          <th>CanCon</th>
+          <th>LGBTQ</th>
+          <th>Indigenous</th>
+          <th>Composer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let track of tracks | orderBy: 'startTime'">
+          <td>{{ds.withHours(track?.startTime)}}</td>
+          <td>{{ds.withHours(track?.endTime)}}</td>
+          <td>{{track?.classification}}</td>
+          <td>{{track?.artist}}</td>
+          <td>{{track?.title}}</td>
+          <td>{{track?.album}}</td>
+          <td>{{track?.label}}</td>
+          <td>{{track?.year}}</td>
+          <td>{{track?.canCon}}</td>
+          <td>{{track?.lgbtq}}</td>
+          <td>{{track?.indigenous}}</td>
+          <td>{{track?.composer}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,9 @@
+<div *ngFor="let article of articles" class="highlight">
+  <img class="component highlight-image" src="{{this.authService.returnIp()}}{{article.thumbnailPath}}" />
+
+  <h4 class="component"><strong>{{article?.title}}</strong></h4>
+
+  <h5 class="component"><strong>{{article?.writer}}</strong></h5>
+
+  <p class="component" [innerHtml]="article?.preview"></p>
+</div>

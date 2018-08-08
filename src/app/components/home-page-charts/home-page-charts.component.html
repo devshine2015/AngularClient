@@ -1,0 +1,18 @@
+<h4 class="page-header">{{chartTitle}} Top 10</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Artist</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let chart of chartData?.entries; let i=index" >
+      <td *ngIf="i < 10">{{i + 1}}</td>
+      <td *ngIf="i < 10">{{chart?.artist}}</td>
+      <td *ngIf="i < 10">{{chart?.title}}</td>
+    </tr>
+  </tbody>
+</table>

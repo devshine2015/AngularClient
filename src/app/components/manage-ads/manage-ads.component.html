@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12 col-sm-12">
+    <h3 class="page-header">Ads</h3>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Slot</th>
+          <th>Clicks</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ad of ads | orderBy: 'title'" [routerLink]="['/ads/edit', ad._id]">
+          <td>{{ad?.title}}</td>
+          <td>{{ad?.slot}}</td>
+          <td>{{ad?.clicks}}</td>
+          <td><input type="checkbox" [(ngModel)]="ad.active"  name="{{ad.title}}-active" (click)="active($event, ad); $event.stopPropagation()">
+          <td><button class="btn btn-danger" (click)= "this.deleteAd(ad._id); $event.stopPropagation()">Delete ad</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

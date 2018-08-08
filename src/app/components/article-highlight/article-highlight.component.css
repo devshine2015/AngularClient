@@ -1,0 +1,17 @@
+.highlight {
+  display: inline-block;
+  vertical-align: top;
+  width: 120px;
+  height: 300px;
+  margin-right: 15px;
+}
+
+.component {
+  display: block;
+}
+
+.highlight-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

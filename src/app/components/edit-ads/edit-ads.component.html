@@ -1,0 +1,45 @@
+<div class="row">
+  <h3 class="page-header">Edit {{ad?.title}}</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form>
+
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="title" name="title" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Position: </label>
+        <select [(ngModel)]="slot" name="slot" class="ui fluid search selection dropdown">
+          <option *ngFor="let slot of this.as.slots" [attr.value]="slot">{{slot}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+          <label>Image</label>
+          <input type="file" class="form-control" name="file" ng2FileSelect [uploader]="uploader"/>
+          <button type="button" (click)="this.uploadImage()">Upload Image</button>
+      </div>
+
+      <div *ngIf="imagePath" class="preview">
+        <label>Image Preview</label>
+        <img src="{{this.authService.returnIp()}}{{imagePath}}">
+        <button class="btn btn-danger" (click)="deleteImage()">Delete Image</button>
+      </div>
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="link" name="link" class="form-control">
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="save()">Save Ad</button>
+    </form>
+
+  </div>
+
+
+</div>

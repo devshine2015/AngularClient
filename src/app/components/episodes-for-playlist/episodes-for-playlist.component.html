@@ -1,0 +1,4 @@
+<div *ngFor="let episode of episodes; let i=index">
+  <span class="date"><strong>{{ds.formatDate(episode?.airDate)}}</strong></span>
+  <fa class="icon" (click)="addToPlaylist(episode?._id)" name="plus"></fa>
+</div>

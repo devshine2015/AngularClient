@@ -1,0 +1,265 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h2 class="page-header">Charts</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Top 30 for the week of {{this.top30?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.top30?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Ads for the week of {{this.ads?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.ads?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Hip-Hop for the week of {{this.hipHop?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.hipHop?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Hip-Hop ads for the week of {{this.hipHopAds?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.hipHopAds?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">RPM for the week of {{this.rpm?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.rpm?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">RPM ads for the week of {{this.rpmAds?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.rpmAds?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Metal for the week of {{this.metal?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.metal?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">Metal ads for the week of {{this.metalAds?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.metalAds?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">World for the week of {{this.world?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.world?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <h4 class="page-header">World ads for the week of {{this.worldAds?.week}}</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of this.worldAds?.entries; let i=index">
+          <td>{{i + 1}}</td>
+          <td>{{entry?.artist}}</td>
+          <td>{{entry?.title}}</td>
+          <td>{{entry?.label}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

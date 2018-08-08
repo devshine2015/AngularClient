@@ -1,0 +1,162 @@
+<div class="row">
+  <h3 class="page-header">Edit Show</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form [formGroup]="myForm">
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" name="name" class="form-control">
+      </div>
+
+      <div class="form-group">
+          <label>Thumbnail Image</label>
+          <input type="file" class="form-control" name="file" ng2FileSelect [uploader]="uploader1"/>
+          <button type="button" (click)="this.uploadThumbnail()">Upload Image</button>
+      </div>
+
+      <div *ngIf="thumbnailPath" class="thumbnail">
+        <label>Current Thumbnail</label>
+        <img src="{{thumbnailPath}}">
+      </div>
+
+      <div class="form-group">
+          <label>Banner Image</label>
+          <input type="file" class="form-control" name="file" ng2FileSelect [uploader]="uploader2"/>
+          <button type="button" (click)="this.uploadBanner()">Upload Image</button>
+      </div>
+
+      <div *ngIf="bannerPath" class="banner">
+        <label>Current Banner Image</label>
+        <img src="{{bannerPath}}">
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <div [froalaEditor]='options' [(froalaModel)]="descriptionContent"></div>
+      </div>
+
+      <div formArrayName="djs">
+        <div *ngFor="let dj of myForm.controls.djs.controls; let i=index">
+
+          <div>
+                  <label>Dj {{i + 1}}</label>
+                  <span class="glyphicon glyphicon-remove pull-right" *ngIf="myForm.controls.djs.controls.length > 1" (click)="removeDj(i)"></span>
+          </div>
+
+          <div [formGroupName]="i">
+              <select formControlName="_id" name="_id" class="ui fluid search selection dropdown">
+                <option selected="true"> -- select an option -- </option>
+                <option *ngFor="let dj of djs" [ngValue]="dj._id">{{dj.username}}</option>
+              </select>
+
+            <div class="margin-20">
+              <a (click)="addDj()" style="cursor: default">
+                Add another Dj +
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Type: </label>
+        <select formControlName="type" name="type" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let type of types" [attr.value]="type">{{type}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Genre: </label>
+        <select formControlName="genre" name="genre" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let genre of genres" [attr.value]="genre">{{genre}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Duration: </label>
+        <select formControlName="duration" name="duration" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let duration of durations" [attr.value]="duration">{{duration}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Time as a string: </label>
+        <input type="text" name="timeString" formControlName="timeString">
+      </div>
+
+      <div class="form-group start">
+        <label>Start Days:</label>
+        <ss-multiselect-dropdown [options]="days" formControlName="startDays"></ss-multiselect-dropdown>
+
+        <br />
+        <label>Start Hour:</label>
+        <select formControlName="startHour" name="startHour" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let hour of hours" [attr.value]="hour">{{hour}}</option>
+        </select>
+
+        <br />
+        <label>Start Minute:</label>
+        <select formControlName="startMinute" name="startMinute" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let minute of minutes" [attr.value]="minute">{{minute}}</option>
+        </select>
+      </div>
+
+      <div class="form-group end">
+        <label>End Days:</label>
+        <ss-multiselect-dropdown [options]="days" formControlName="endDays"></ss-multiselect-dropdown>
+
+        <br />
+        <label>End Hour:</label>
+        <select formControlName="endHour" name="endHour" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let hour of hours" [attr.value]="hour">{{hour}}</option>
+        </select>
+
+        <br />
+        <label>End Minute:</label>
+        <select formControlName="endMinute" name="endMinute" class="ui fluid search selection dropdown">
+          <option selected="true"> -- select an option -- </option>
+          <option *ngFor="let minute of minutes" [attr.value]="minute">{{minute}}</option>
+        </select>
+      </div>
+
+      <div class= "form-group">
+        <label>Start Date</label>
+        <input ngui-datetime-picker [is-draggable]="false" name="startDate" formControlName="startDate" />
+      </div>
+
+      <div class="form-group">
+        <label>End Date</label>
+        <input ngui-datetime-picker [is-draggable]="false" name="endDate" formControlName="endDate" /> <span class="req"><em>*not required</em></span>
+      </div>
+
+      <div class="form-group">
+        <label>Placeholder</label>
+        <input type="checkbox" formControlName="placeholder" />
+      </div>
+
+      <div class="form-group">
+        <label>Tags:</label>
+        <tag-input formControlName="tags" [editable]='true'></tag-input>
+      </div>
+
+
+
+
+
+      <button  class="btn btn-primary" (click)="showSubmit()">Save Changes</button>
+    </form>
+
+  </div>
+
+
+</div>

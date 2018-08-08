@@ -1,0 +1,19 @@
+.show {
+  margin-top: 15px;
+  display: block;
+  height: 100px;
+}
+
+.image {
+  display: inline-block;
+  float: left;
+}
+
+.info {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.episodes {
+  margin-left: 115px;
+}

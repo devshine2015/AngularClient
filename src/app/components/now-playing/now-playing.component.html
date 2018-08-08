@@ -1,0 +1,76 @@
+<div class="row main-wrapper">
+
+  <div class="col-md-4 socials-home">
+
+    <div class="logo">
+      <img class="front-logo-img" src="{{this.authService.returnIp()}}public/assets/assets/main-logo.png" (click)="goHome()" />
+    </div>
+
+    <div class="socials">
+      <i class="fa fa-facebook fa-2x icon" (click)="goTo(facebook)"></i>
+      <i class="fa fa-twitter fa-2x icon" (click)="goTo(twitter)"></i>
+      <i class="fa fa-youtube fa-2x icon" (click)="goTo(youtube)"></i>
+      <i class="fa fa-instagram fa-2x icon" (click)="goTo(instagram)"></i>
+    </div>
+  </div>
+
+  <div class="col-md-1 image-box">
+    <div class="image-content">
+      <img class="show-image" src="{{this.authService.returnIp()}}{{currentShow?.thumbnailPath}}">
+    </div>
+  </div>
+
+  <div class="col-md-2 now-playing">
+
+    <div class="name-content">
+      <h3 class="page-header">{{currentShow?.name}}</h3>
+    </div>
+
+    <div *ngIf="currentTrack && (currentTrack.classification == 'Theme')">
+      <p><strong>Now Playing:</strong> {{currentTrack?.artist}} - {{currentTrack?.title}}</p>
+      <p>{{currentTrack?.album}} - {{currentTrack?.year}}</p>
+    </div>
+
+    <div *ngIf="currentTrack && (currentTrack.classification == 'Talk')">
+      <p *ngIf="currentTrack.title"><strong>Now Discussing:</strong> {{currentTrack?.title}}</p>
+    </div>
+  </div>
+
+  <div class="col-md-5 buttons">
+    <div class="play-btn">
+      <i class="fa fa-play fa-2x play-pause" (click)="play()" *ngIf="!playing"></i>
+      <i class="fa fa-pause fa-2x" (click)="pause()" *ngIf="playing"></i>
+    </div>
+    <!-- <input type="range" [ngModel]="volume" (ngModelChange)="changeVolume($event)" step="0.01" min="0" max="1"> -->
+    <button [ngClass]="{'live': firstLive}" class="btn first" (click)="live()" ><span>LISTEN TO CJLO LIVE</span></button>
+    <button [ngClass]="{'live': secondLive}" class="btn second" (click)="toggleBuilder()" ><span>BUILD YOUR PLAYLIST</span></button>
+
+    <div *ngIf="!radio" id="progressBar" (click)="skip($event)"><span id="progress"></span></div>
+  </div>
+</div>
+
+<div class="row playlist-builder">
+
+  <div class="col-md-7 col-xs-7 col-sm-7">
+    <h3 class="page-header">My Playlist</h3>
+
+    <button class="btn btn-primary" (click)="deletePlaylist()" >Clear Playlist</button>
+    <div *ngFor="let show of showNames; let i=index">
+      <h4>{{show}}</h4>
+      {{this.ds.formatDate(episodeDates[i])}}
+      <span class="glyphicon glyphicon-remove pull-right" (click)="removeTrack(i)"></span>
+    </div>
+
+    <h3 class="page-header">Shows</h3>
+    <div class="shows">
+      <app-shows-for-playlist></app-shows-for-playlist>
+    </div>
+  </div>
+
+  <div class="col-md-5 col-xs-5 col-sm-5">
+    <h3 class="page-header">Add by genre</h3>
+    <div *ngFor="let tag of tags" id="{{tag}}" class="tag unclicked" (click)="addFromTag(tag)" (mousedown)="highlight($event)" (mouseup)="removeHighlight($event)">
+      <strong class="child">{{tag}}</strong>
+    </div>
+  </div>
+</div>

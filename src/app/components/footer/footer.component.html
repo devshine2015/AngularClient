@@ -1,0 +1,17 @@
+<div class="row wrapper">
+
+  <div class="col-md-5 col-xs-12 col-sm-12 links">
+    <ul class="link-list">
+      <li class="link" *ngFor="let page of pages" [routerLink]="['/static-page-rerout', page._id]">{{page?.title}}</li>
+    </ul>
+  </div>
+
+  <div class="col-md-7 col-xs-12 col-sm-12 ad">
+    <a [href]="" (click)="increment(bottomAd._id)"><img src="{{path}}" /></a>
+  </div>
+  <div class="search-content">
+    <div class="search-input">
+      <img src="/assets/images/search_button.jpg"><span>SEARCH</span>
+    </div>
+  </div>
+</div>

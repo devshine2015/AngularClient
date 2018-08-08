@@ -1,0 +1,20 @@
+<div class="row">
+
+  <div class="col-md-12">
+
+    <h2 class="page-header">Shows</h2>
+
+
+    <div class="row show-container" *ngFor="let show of shows | orderBy: 'name'" (click)="linkToShow(show)">
+
+      <div class="col-md-3 thumbnail">
+        <img src="http://localhost:3000/{{show?.thumbnailPath}}">
+      </div>
+
+      <div class="col-md-9 title">
+        <h3>{{show?.name}}</h3>
+        <p>{{render(show?.tags)}}
+      </div>
+    </div>
+  </div>
+</div>

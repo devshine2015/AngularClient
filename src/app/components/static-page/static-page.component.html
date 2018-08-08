@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12 col-sm-12">
+
+    <div class="title page-header">
+      <h3>{{article?.title}}</h3>
+    </div>
+
+    <div class="fr-view article-body" [innerHTML]="article?.body | safeHtml"></div>
+
+  </div>
+</div>

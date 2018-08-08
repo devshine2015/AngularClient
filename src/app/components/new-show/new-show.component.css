@@ -1,0 +1,15 @@
+.start {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.end {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.req {
+  font-size: 9px;
+}

@@ -1,0 +1,14 @@
+<div *ngFor="let show of shows | orderBy: 'name'; let i=index">
+
+  <div class="show" (click)="toggleEpisodes(i)">
+    <img class="image" src="{{this.authService.returnIp()}}{{show.thumbnailPath}}" />
+    <div class="info">
+      <h4>{{show?.name}}</h4>
+      <p>{{show?.tags}}</p>
+    </div>
+  </div>
+
+  <div class="episodes">
+    <app-episodes-for-playlist [showId]=show._id *ngIf="clicked === i"></app-episodes-for-playlist>
+  </div>
+</div>

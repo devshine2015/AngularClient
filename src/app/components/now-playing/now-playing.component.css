@@ -1,0 +1,163 @@
+.main-wrapper {
+}
+
+.image-box {
+  height: 100%;
+  display: inline-block;
+  min-height: 200px;
+}
+.image-box .image-content {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playlist-builder {
+  display: none;
+  width: 100%;
+}
+
+.now-playing {
+  height: 100%;
+  display: inline-block;
+  min-height: 200px;
+}
+
+.now-playing .name-content {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  min-height: 200px;
+}
+
+.buttons .play-btn {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons .first {
+  width: 40%;
+  padding: 0;
+  background-image: url('/assets/images/btn-bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons .first .live {
+  width: 40%;
+  padding: 0;
+  background-image: url('/assets/images/btn-bg-active.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons .second {
+  width: 40%;
+  padding: 0;
+  background-image: url('/assets/images/btn-bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons .second .live {
+  width: 40%;
+  padding: 0;
+  background-image: url('/assets/images/btn-bg-active.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons #progressBar {
+  display: none;
+}
+
+.btn {
+  background-color: white;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.socials {
+  display: inline-block;
+  height: 100%;
+  vertical-align: bottom;
+  margin-bottom: 55px;
+
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+}
+
+.front-logo-img {
+}
+
+.socials-home {
+  display: inline-block;
+  min-height: 200px;
+}
+.shows {
+  height: 200px;
+  overflow-y: scroll;
+  padding-right: 17px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.tag:hover {
+  cursor: pointer;;
+}
+
+.clicked {
+  background-color: black;
+  color: white;
+}
+
+.unclicked {
+  background-color: white;
+  color: black;
+}
+
+#progressBar {
+ border:1px solid #aaa;
+ color:#fff;
+ width:295px;
+ height:20px;
+ z-index: 0;
+}
+
+#progress {
+   display:inline-block;
+   background-color:#f4bf42;
+}
+
+.play-pause {
+  cursor: pointer;
+}

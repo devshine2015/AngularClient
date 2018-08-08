@@ -1,0 +1,172 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="page-header">Edit episode for {{show?.name}}</h3>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label>Episode Description</label>
+      <div [froalaEditor]='options' [(froalaModel)]="editorContent"></div>
+      <button class="btn btn-primary" (click)="saveBody()">Save Description</button>
+    </div>
+  </div>
+</div>
+
+<div class="row episode-stats">
+
+  <div class="col-md-6">
+    <h3>CanCon %</h3>
+    <h4>{{canconPercent}}</h4>
+  </div>
+
+  <div class="col-md-6">
+    <h3>New %</h3>
+    <h4>{{newPercent}}</h4>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-12">
+
+    <form [formGroup]="myForm">
+
+      <div class="page-header">
+        <h3>Tracks</h3>
+      </div>
+
+      <div formArrayName="tracks">
+
+        <div *ngFor="let track of myForm.controls.tracks.controls; let i=index">
+
+          <div [formGroupName]="i">
+
+            <div>
+              <span>Track {{i + 1}}</span>
+              <span class="glyphicon glyphicon-remove pull-right" *ngIf="(myForm.controls.tracks.controls.length > 1) && (i === myForm.controls.tracks.controls.length - 1)" (click)="removeTrack(i)"></span>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-3 type-select">
+                <select formControlName="classification" name="classification" class="ui fluid search selection dropdown">
+                  <option selected="true" value="Theme">Theme</option>
+                  <option *ngFor="let type of types" [ngValue]="type">{{type}}</option>
+                </select>
+              </div>
+
+              <div class="col-md-3 start-select">
+                <div class="form-group">
+                  <label>Start time (hours and minutes):</label>
+                  <input formControlName="startDate" ngui-datetime-picker [min-date]="minDate" [max-date]="maxDate" [disabled-dates]="disabledDates" />
+                  <label>Start time (seconds):</label>
+                  <input type="number" formControlName="startSecond" />
+                </div>
+              </div>
+
+              <div class="col-md-3 start-select">
+                <div class="form-group">
+                  <label>End time (hours and minutes):</label>
+                  <input formControlName="endDate" ngui-datetime-picker [min-date]="minDate" [max-date]="maxDate"[disabled-dates]="disabledDates"/>
+                  <label>End time (seconds):</label>
+                  <input type="number" formControlName="endSecond" />
+                </div>
+              </div>
+
+
+
+            </div>
+
+            <div class="row track-info" *ngIf="(this.myForm.controls['tracks']['controls'][i]['controls']['classification'].value == 'Theme') || (this.myForm.controls['tracks']['controls'][i]['controls']['classification'].value == 'Background')">
+
+              <div class="col-md-6">
+
+                <div class="form-group">
+                  <label>Artist:</label>
+                  <br />
+                  <input type="text" formControlName="artist" name="artist" />
+                </div>
+
+                <div class="form-group">
+                  <label>Title:</label>
+                  <br />
+                  <input type="text" formControlName="title" name="title" />
+                </div>
+
+              </div>
+
+              <div class="col-md-6 type-select">
+
+                <label>Cancon:</label>
+                <input type="checkbox" formControlName="canCon" />
+                <br />
+                <label>LGBTQ:</label>
+                <input type='checkbox' formControlName="lgbtq" />
+                <br />
+                <label>Indigenous:</label>
+                <input type="checkbox" formControlName="indigenous" />
+                <br />
+                <label>New:</label>
+                <input type="checkbox" formControlName="new" />
+              </div>
+
+            </div>
+
+            <div class="row track-info" *ngIf="(this.myForm.controls['tracks']['controls'][i]['controls']['classification'].value == 'Talk')">
+
+              <div class="col-md-12">
+
+                <div class="form-group">
+                  <label>Topic:</label>
+                  <br />
+                  <input type="text" formControlName="title" name="title" />
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="row socan-fields"
+            *ngIf="(this.socan) && ((this.myForm.controls['tracks']['controls'][i]['controls']['classification'].value == 'Theme') || (this.myForm.controls['tracks']['controls'][i]['controls']['classification'].value == 'Background')) && (this.myForm.controls['tracks']['controls'][i]['controls']['composer']) ">
+
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Composer</label>
+                  <input type="text" formControlName="composer" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <button class="btn btn-primary" (click)="saveTrack(i)">Save track</button>
+                <br />
+                <br />
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-primary" (click)="newTrack()">Add New Track</button>
+          <br />
+          <br />
+        </div>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>

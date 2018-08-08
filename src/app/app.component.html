@@ -1,0 +1,7 @@
+<div class="container">
+  <app-dashboard-navbar *ngIf="authService.loggedIn()"></app-dashboard-navbar>
+  <app-now-playing></app-now-playing>
+  <flash-messages></flash-messages>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

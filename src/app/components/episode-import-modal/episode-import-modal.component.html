@@ -1,0 +1,15 @@
+<h3 class="page-header">Select an epidose to import</h3>
+<button type="button" class="btn btn-danger" (click)="cancelButton()" data-dismiss="modal">Cancel</button>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Air Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let episode of episodes" (click)="importEpisode(episode._id)">
+      <td>{{this.dateString.formatDate(episode.airDate)}}</td>
+    </tr>
+  </tbody>
+</table>

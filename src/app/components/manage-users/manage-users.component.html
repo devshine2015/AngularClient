@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="page-header">Users</h3>
+    <input type="text" class="form-control" [(ngModel)]=query
+         (keyup)=filter() placeholder="Enter a search term" />
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>email</th>
+          <th>roles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of getData() | orderBy: 'username'| paginate: { itemsPerPage: 10, currentPage: p }">
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td><div *ngFor="let role of roles">
+              <label>
+                  <input type="checkbox"
+                         name="roles"
+                         [checked]="hasRole(role, user)"
+                         (change)="checkFun($event, role, user)"
+                         />
+                  {{role}}
+              </label>
+          </div></td>
+          <td><button class="btn btn-danger" (click)= "this.deleteUser(user); $event.stopPropagation()">Delete User</button></td>
+        </tr>
+    </table>
+
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

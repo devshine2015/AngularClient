@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="page-header">Episodes for {{show?.name}}</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-primary" (click)="newEpisode()">New Episode</button>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <h4>Upcoming Episodes</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Air Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let episode of upcomingEpisodes" [routerLink]="['/edit-episode/', episode._id]">
+          <td>{{this.dateString.formatDate(episode.airDate)}}</td>
+          <td><button class="btn btn-danger" (click)="deleteEpisode(episode, 'upcoming'); $event.stopPropagation()">Delete Episode</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-6">
+    <h4>Past Episodes</h4>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Air Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let episode of pastEpisodes" [routerLink]="['/edit-episode/', episode._id]">
+          <td>{{this.dateString.formatDate(episode.airDate)}}</td>
+          <td><button class="btn btn-danger" (click)="deleteEpisode(episode, 'past'); $event.stopPropagation()">Delete Episode</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

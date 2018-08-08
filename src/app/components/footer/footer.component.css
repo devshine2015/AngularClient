@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.wrapper .search-content {
+  text-align: center;
+}
+
+.wrapper .search-content .search-input {
+  margin-top: 128px;
+}
+
+.wrapper .search-content img {
+  width: 20%;
+}
+
+.link-list {
+  list-style: none;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    font-size: .7em;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.ad:hover {
+  cursor: pointer;
+}

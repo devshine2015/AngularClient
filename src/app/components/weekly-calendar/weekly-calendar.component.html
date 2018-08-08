@@ -1,0 +1,586 @@
+<div class="row">
+  <div class="col-sm-2 col-xs-2 col-md-2 genres" >
+    <ul>
+      <li class="metal"><p>Metal</p></li>
+      <li class="rpm"><p>RPM</p></li>
+      <li class="world"><p>World</p></li>
+      <li class="hip-hop"><p>Hip-Hop</p></li>
+      <li class="talk"><p>Talk</p></li>
+      <li class="specialty"><p>Specialty</p></li>
+      <li class="jazz"><p>Jazz</p></li>
+      <li class="alt-rock"><p>Alt-Rock</p></li>
+    </ul>
+  </div>
+  <div class="col-sm-1 col-xs-1 col-md-1" id="timeSlots">
+
+    <div class="slot">
+      <h5>06:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>06:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>07:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>07:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>08:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>08:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>09:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>09:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>10:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>10:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>11:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>11:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>12:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>12:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>13:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>13:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>14:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>14:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>15:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>15:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>16:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>16:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>17:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>17:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>18:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>18:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>19:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>19:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>20:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>20:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>21:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>21:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>22:00</h5>
+    </div>
+    <div class="slot">
+      <h5>22:30</h5>
+    </div>
+    <div class="slot">
+      <h5>23:00</h5>
+    </div>
+    <div class="slot">
+      <h5>23:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>00:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>00:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>01:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>01:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>02:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>02:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>03:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>03:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>04:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>04:30</h5>
+    </div>
+
+    <div class="slot">
+      <h5>05:00</h5>
+    </div>
+
+    <div class="slot">
+      <h5>05:30</h5>
+    </div>
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(0)}}"></div>
+
+    <div class="flip-container" (click)="linkToShow(0, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(0, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(0, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '05', '30')}}"></div>
+
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(1)}}"></div>
+
+    <div class="flip-container" (click)="linkToShow(1, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(1, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(1, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '05', '30')}}"></div>
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(2)}}"></div>
+
+    <div class="flip-container" (click)="linkToShow(2, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(2, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(2, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '05', '30')}}"></div>
+
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(3)}}"></div>
+
+    <div class="flip-container" (click)="linkToShow(3, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(3, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(3, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '05', '30')}}"></div>
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(4)}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(4, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(4, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '05', '30')}}"></div>
+
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(5)}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(5, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(5, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '05', '30')}}"></div>
+
+
+  </div>
+
+  <div class="day col-sm-1 col-xs-1 col-md-1">
+    <div class="dayName" innerHtml="{{dayName(6)}}"></div>
+
+    <div class="flip-container" (click)="linkToShow(6, '06', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '06', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '06', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '06', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '07', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '07', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '07', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '07', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '08', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '08', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '08', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '08', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '09', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '09', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '09', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '09', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '10', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '10', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '10', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '10', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '11', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '11', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '11', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '11', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '12', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '12', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '12', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '12', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '13', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '13', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '13', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '13', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '14', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '14', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '14', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '14', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '15', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '15', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '15', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '15', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '16', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '16', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '16', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '16', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '17', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '17', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '17', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '17', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '18', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '18', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '18', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '18', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '19', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '19', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '19', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '19', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '20', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '20', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '20', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '20', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '21', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '21', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '21', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '21', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '22', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '22', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '22', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '22', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '23', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '23', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(6, '23', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(6, '23', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '00', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '00', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '00', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '00', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '01', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '01', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '01', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '01', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '02', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '02', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '02', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '02', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '03', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '03', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '03', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '03', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '04', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '04', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '04', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '04', '30')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '05', '00')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '05', '00')}}"></div>
+    <div class="flip-container" (click)="linkToShow(7, '05', '30')" ontouchstart="this.classList.toggle('hover');" innerHtml="{{displaySlot(7, '05', '30')}}"></div>
+
+  </div>
+</div>

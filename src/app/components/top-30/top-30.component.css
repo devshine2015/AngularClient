@@ -1,0 +1,17 @@
+.entry {
+  width: 100%;
+}
+
+.week {
+  margin-bottom: 25px;
+}
+
+.number {
+  display: inline-block;
+  width: 5%;
+}
+
+.field {
+  display: inline-block;
+  width: 30%;
+}

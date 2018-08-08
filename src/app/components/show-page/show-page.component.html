@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="header-image col-md-12">
+    <img src="{{this.authService.returnIp()}}{{bannerPath}}">
+  </div>
+</div>
+
+<div class="row">
+  <div class="title-time col-md-12">
+    <h2 class="page-header">{{show?.name}}</h2>
+    <h4>{{show?.timeString}}</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="fr-view description col-md-12">
+    <p class="fr-view" [innerHtml]="show?.description | safeHtml"></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="episodes col-md-12">
+    <h3 class="page-header">Episodes</h3>
+    <div *ngFor="let episode of episodes" (click)="linkToEpisode(episode)">
+      <h4 class="episode-link">{{ds.formatDate(episode?.airDate)}}</h4>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class=col-md-12>
+    <div class="banner-image">
+      <img src="http://localhost:3000/{{show?.bannerPath}}">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class=col-md-12>
+    <div class="title-date">
+      <h2 class="page-header">{{show?.name}} - {{ds.formatDate(episode?.airDate)}}</h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class=col-md-12>
+    <div class="description">
+      <p class="page-header fr-view" [innerHtml]="episode?.body"></p>
+    </div>
+  </div>
+</div>

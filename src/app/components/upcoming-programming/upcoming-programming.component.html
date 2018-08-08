@@ -1,0 +1,38 @@
+<div class="row">
+
+  <div class="col-md-8 col-sm-8 col-xs-8">
+    <span class="upcoming-programming"><h3><strong>UPCOMING PROGRAMMING</strong></h3></span>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-4">
+    <span class="full-schedule" (click)="goToSchedule()">FULL SCHEDULE</span>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-12 col-sm-12 col-xs-12 programming-and-arrows-container">
+
+    <div class="left-arrow">
+      <i (click)="downSlot()" class="fa fa-angle-left fa-5x arrow" aria-hidden="true"></i>
+    </div>
+
+    <div class="show-container">
+      <div *ngFor="let show of displayShows; let i = index" class="upcoming-show" (click)="linkToShow(show._id)">
+        <div class="upcoming-image">
+          <img src="{{this.authService.returnIp()}}{{show.thumbnailPath}}" />
+          <span class="upcoming-name"><strong>{{show.name}}</strong></span>
+          <br />
+          <span>{{dayOfIndex(i)}}  {{show.startHour}}:{{show.startMinute}} - {{show.endHour}}:{{show.endMinute}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-arrow">
+      <i (click)="upSlot()" class="fa fa-angle-right fa-5x arrow" aria-hidden="true"></i>
+    </div>
+
+  </div>
+
+</div>

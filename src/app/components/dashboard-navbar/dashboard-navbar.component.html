@@ -1,0 +1,76 @@
+<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">CJLO</a>
+        </div>
+        <div id="dashboard-navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-left dropdown">
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin')"><a dropdown-open>Users</a></li>
+                <ul class="dropdown-menu">
+                  <li><a [routerLink]="['/register-users']">Register User</a></li>
+                  <li><a [routerLink]="['/manage-users']">Manage Users</a></li>
+                </ul>
+            </div>
+
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('author') || this.roleService.checkRole('editor')"><a dropdown-open>Articles</a></li>
+                <ul class="dropdown-menu">
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('author')" [routerLink]="['/new-article']">New Article</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('author')" [routerLink]="['/my-drafts']">My Drafts</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('editor')" [routerLink]="['/articles/review']">Under Review</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('editor')" [routerLink]="['/articles/manage-published']">Manage Published</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('editor')" [routerLink]="['/articles/manage-unpublished']">Manage Unpublished</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show admin') || this.roleService.checkRole('dj')"><a dropdown-open>Shows</a></li>
+                <ul class="dropdown-menu">
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('dj')" [routerLink]="['/my-shows']">My Shows</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show-admin')" [routerLink]="['/new-show']">New Show</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show-admin')" [routerLink]="['/manage-shows']">Manage Shows</a></li>
+                </ul>
+            </div>
+
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show admin')"><a dropdown-open>Playlists and Charts</a></li>
+                <ul class="dropdown-menu">
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show-admin')" [routerLink]="['/new-playlist']">New Playlist</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show-admin')" [routerLink]="['/new-chart']">New Chart</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin') || this.roleService.checkRole('show-admin')" [routerLink]="['/front-page-charts']">Front Page Chart</a></li>
+                </ul>
+            </div>
+
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin')"><a dropdown-open>Static Pages</a></li>
+                <ul class="dropdown-menu">
+                  <li><a *ngIf="this.roleService.checkRole('admin')" [routerLink]="['/new-static-page']">New Static Page</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin')" [routerLink]="['/static-pages']">Edit Static Pages</a></li>
+                </ul>
+            </div>
+
+            <div class="nav navbar-nav navbar-left dropdown" dropdown>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}" *ngIf="this.roleService.checkRole('admin')"><a dropdown-open>Ads</a></li>
+                <ul class="dropdown-menu">
+                  <li><a *ngIf="this.roleService.checkRole('admin')" [routerLink]="['/new-ad']">New Ad</a></li>
+                  <li><a *ngIf="this.roleService.checkRole('admin')" [routerLink]="['/manage-ads']">Manage Ads</a></li>
+                </ul>
+            </div>
+
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a (click)="onLogoutClick()" href="#">Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>

@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12 col-sm-12">
+    <h2 class="page-header">Hip-Hop chart</h2>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12 col-xs-12 col-sm-12">
+
+    <div class="week">
+      <label>Week of: </label>
+      <input type="text" [ngModel]="this.week" name="week" />
+    </div>
+
+    <form [formGroup]="myForm">
+      <div formArrayName="entries">
+
+        <div *ngFor="let entry of myForm.controls.entries.controls; let i=index">
+
+          <div [formGroupName]="i">
+
+            <div class="form-group entry">
+
+              <div class="number">
+                {{i + 1}}
+              </div>
+
+              <div class="field">
+                <label>Artist:</label>
+                <input type="text" formControlName="artist" name="artist" />
+              </div>
+
+              <div class="field">
+                <label>Title:</label>
+                <input type="text" formControlName="title" name="title" />
+              </div>
+
+              <div class="field">
+                <label>Label:</label>
+                <input type="text" formControlName="label" name="label" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" (click)="submit()">Submit Chart</button>
+
+
+      </div>
+    </form>
+
+  </div>
+</div>

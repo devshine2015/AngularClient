@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-12 col-xs-12 col-sm-12">
+    <h3 class="page-header">Published Articles</h3>
+  </div>
+</div>
+
+<input type="text" class="form-control" [(ngModel)]=queryUsername
+     (keyup)=filterUsername() placeholder="Search by username" />
+
+<input type="text" class="form-control" [(ngModel)]=queryTitle
+    (keyup)=filterTitles() placeholder="Search titles" />
+
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Date Created</th>
+          <th>Spotlight</th>
+          <th>Highlighted</th>
+          <th>Magazine</th>
+          <th>News and Events</th>
+          <th>Video</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let article of getData()" [routerLink]="['/articles/edit', article._id]">
+          <td>{{article?.title}}</td>
+          <td>{{article?.author?.username}}</td>
+          <td>{{this.dateString.formatDate(article?.created_at)}}</td>
+          <td><input type="checkbox" [(ngModel)]="article.spotlight" name="{{article.title}}-spotlight" (click)="spotlight($event, article); $event.stopPropagation()">
+          <td><input type="checkbox" [(ngModel)]="article.highlighted"  name="{{article.title}}-highlighted" (click)="highlight($event, article); $event.stopPropagation()">
+          <td><input type="checkbox" [(ngModel)]="article.magazine"  name="{{article.title}}-magazine" (click)="inMagazine($event, article); $event.stopPropagation()">
+          <td><input type="checkbox" [(ngModel)]="article.newsAndEvents"  name="{{article.title}}-news" (click)="inNandE($event, article); $event.stopPropagation()">
+          <td><input type="checkbox" [(ngModel)]="article.video"  name="{{article.title}}-video" (click)="inVideo($event, article); $event.stopPropagation()">
+          <td><button class="btn btn-primary" (click)="openWindow(article._id); $event.stopPropagation()">Preview Article</button></td>
+          <td><button class="btn btn-warning" (click)="unpublishArticle(article._id); $event.stopPropagation()">Unpublish Article</button></td>
+          <td><button class="btn btn-danger" (click)= "this.deleteArticle(article._id); $event.stopPropagation()">Delete article</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

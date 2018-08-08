@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="col-md-9 col-sm-12 col-xs-12 spotlight">
+
+    <img class="spotlight-image" src="{{this.authService.returnIp()}}{{spotlight?.image1Path}}" />
+
+    <div>
+      <h3 class="spotlight-title">{{spotlight?.title}}</h3>
+      <span class="spotlight-author"><strong>CHARLES DESBIENS</strong></span>
+
+      <p class="spotlight-text fr-view" [innerHtml]="spotlight?.articleBody"></p>
+
+      <h4 class="read-more"><strong>READ MORE</strong></h4>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-3 col-xs-3 ad">
+    <a [href]="" (click)="increment(sideAd._id)"><img src="{{path}}" /></a>
+  </div>
+
+</div>
+
+<div class="row upcoming">
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <app-upcoming-programming></app-upcoming-programming>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-8 col-sm-8 col-xs-8">
+    <ul class="article-tabs">
+      <li class="category" [ngClass]="{'activeArticle' : articleIndex == 2}" (click)="selectArticles('News and Events', 2)">News and Events</li>
+      <li class="category" [ngClass]="{'activeArticle' : articleIndex == 1}" (click)="selectArticles('Magazine', 1)">Magazine</li>
+      <li class="category" [ngClass]="{'activeArticle' : articleIndex == 3}" (click)="selectArticles('Video', 3)">Video</li>
+      <li class="category" [ngClass]="{'activeArticle' : articleIndex == 4}" (click)="selectArticles('Sessions', 4)">Sessions</li>
+    </ul>
+
+    <app-article-highlight [articleCategory]="articleCategory"></app-article-highlight>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-4 charts">
+    <app-home-page-charts [chart]="chart"></app-home-page-charts>
+    <ul class="charts-list">
+      <li class="type" [ngClass]="{'active' : selectedIndex == 1}" (click)="select('Top 30', $event, 1)" >Stationwide</li>
+      <li class="type" [ngClass]="{'active' : selectedIndex == 2}" (click)="select('Hip-Hop', $event, 2)" >Hip Hop</li>
+      <li class="type" [ngClass]="{'active' : selectedIndex == 3}" (click)="select('RPM', $event, 3)" >RPM</li>
+      <li class="type" [ngClass]="{'active' : selectedIndex == 4}" (click)="select('Metal', $event, 4)" >Metal</li>
+      <li class="type" [ngClass]="{'active' : selectedIndex == 5}" (click)="select('World', $event, 5)" >World</li>
+      <li class="type" [routerLink]="['/charts']" >Full Charts</li>
+    </ul>
+  </div>
+
+
+
+
+</div>

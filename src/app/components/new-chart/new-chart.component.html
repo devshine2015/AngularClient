@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-md-6 startDate-select">
+    <h3 class="page-header">Start date</h3>
+
+    <input
+          [(ngModel)]="startDate"
+          ngui-datetime-picker
+          [show-close-layer]="true"
+          [is-draggable]="false"
+          />
+
+  </div>
+
+  <div class="col-md-6 date-select">
+    <h3 class="page-header">End date</h3>
+
+    <input
+          [(ngModel)]="endDate"
+          ngui-datetime-picker
+          [show-close-layer]="true"
+          [is-draggable]="false"
+          />
+
+  </div>
+</div>
+
+<div class="row button-row">
+  <div class="col-md-12">
+    <button class="btn btn-primary" (click)="getChart()">Get Chart</button>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-12">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Artist</th>
+          <th>Title</th>
+          <th>Album</th>
+          <th>Label</th>
+          <th>Year</th>
+          <th>CanCon</th>
+          <th>LGBTQ</th>
+          <th>Indigenous</th>
+          <th>Play Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let track of tracks | reverse: 'plays'">
+          <td>{{track?.artist}}</td>
+          <td>{{track?.title}}</td>
+          <td>{{track?.album}}</td>
+          <td>{{track?.label}}</td>
+          <td>{{track?.year}}</td>
+          <td>{{track?.canCon}}</td>
+          <td>{{track?.lgbtq}}</td>
+          <td>{{track?.indigenous}}</td>
+          <td>{{track?.plays}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
